@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="email_password_spacer">8dp</dimen>
+    <dimen name="sign_in_question_spacer">4dp</dimen>
+</resources>

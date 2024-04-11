@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Authentication</string>
+    <string name="email_label">Email</string>
+    <string name="password_label">Password</string>
+    <string name="password_icon_description">Password Visibility</string>
+    <string name="signup_button">Sign up</string>
+    <string name="signin_button">Sign in</string>
+    <string name="already_user_question">Already a user?</string>
+    <string name="already_user_link">Sign in</string>
+    <string name="not_user_question">Don\'t have an account?</string>
+    <string name="not_user_link">Sign up</string>
+    <string name="footer">CaolanCode</string>
+    <string name="github_link">https://github.com/CaolanCode</string>
+</resources>
