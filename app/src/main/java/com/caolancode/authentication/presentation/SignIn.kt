@@ -1,4 +1,4 @@
-package com.caolancode.authentication.Presentation
+package com.caolancode.authentication.presentation
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -13,15 +13,18 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.stringResource
-import com.caolancode.authentication.Presentation.components.AlreadyUser
-import com.caolancode.authentication.Presentation.components.AuthButton
-import com.caolancode.authentication.Presentation.components.EmailPasswordInput
 import com.caolancode.authentication.R
+import com.caolancode.authentication.domain.AuthViewModel
+import com.caolancode.authentication.presentation.components.AlreadyUser
+import com.caolancode.authentication.presentation.components.AuthButton
+import com.caolancode.authentication.presentation.components.EmailTextField
+import com.caolancode.authentication.presentation.components.PasswordTextField
 
 @Composable
-fun SignUp(
+fun SignIn(
     modifier: Modifier,
-    onNavigateToSignIn: () -> Unit
+    onNavigateToSignUp: () -> Unit,
+    authViewModel: AuthViewModel
 ) {
     var email by rememberSaveable { mutableStateOf("") }
     var password by rememberSaveable { mutableStateOf("") }
@@ -39,26 +42,32 @@ fun SignUp(
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        EmailPasswordInput(
-            email = email,
-            onEmailChange = ::onEmailChange,
-            password = password,
-            onPasswordChange = ::onPasswordChange
+        EmailTextField(
+            value = email,
+            onValueChange = ::onEmailChange
         )
-        Spacer(modifier = modifier.height(spacerHeight))
+        Spacer(modifier = Modifier.height(spacerHeight))
+        PasswordTextField(
+            value = password,
+            onValueChange = ::onPasswordChange,
+            authViewModel = authViewModel
+        )
         AuthButton(
-            text = stringResource(id = R.string.signup_button),
+            text = stringResource(id = R.string.signin_button),
             onClick = {
-                // TODO: sign up
+                if (email.isNotEmpty() && password.isNotEmpty()) {
+                    authViewModel.signInToAccount(email, password)
+                } else {
+                    authViewModel.updateErrorMessage("Must enter email and password")
+                }
             }
         )
         Spacer(modifier = modifier.height(spacerHeight))
         AlreadyUser(
             modifier = modifier,
-            question = stringResource(id = R.string.already_user_question),
-            navigatePage = onNavigateToSignIn,
-            linkText = stringResource(id = R.string.already_user_link)
+            question = stringResource(id = R.string.not_user_question),
+            navigatePage = onNavigateToSignUp,
+            linkText = stringResource(id = R.string.not_user_link)
         )
     }
 }
-

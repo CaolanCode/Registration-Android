@@ -1,4 +1,4 @@
-package com.caolancode.authentication.Presentation.components
+package com.caolancode.authentication.presentation.components
 
 import androidx.compose.material3.Button
 import androidx.compose.material3.Text

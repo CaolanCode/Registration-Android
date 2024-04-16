@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "486207628185",
+    "project_id": "authentication-7b6a7",
+    "storage_bucket": "authentication-7b6a7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:486207628185:android:57894d78b3ff62ada26908",
+        "android_client_info": {
+          "package_name": "com.caolancode.authentication"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDkmsr8kVxxZOE3U8i3Gkz9QHI-oCfB4K8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

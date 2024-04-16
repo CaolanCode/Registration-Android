@@ -1,4 +1,4 @@
-package com.caolancode.authentication.Presentation.ui.theme
+package com.caolancode.authentication.presentation.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

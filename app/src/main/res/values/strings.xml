@@ -11,4 +11,5 @@
     <string name="not_user_link">Sign up</string>
     <string name="footer">CaolanCode</string>
     <string name="github_link">https://github.com/CaolanCode</string>
+    <string name="signout_button">Sign out</string>
 </resources>
