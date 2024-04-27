@@ -29,7 +29,7 @@ fun SetupNavGraph(
     ) {
         composable(Destination.SignIn.route) {
             if (isSignedIn) {
-                Home(authViewModel = authViewModel)
+                Home()
             } else {
                 SignIn(
                     modifier = Modifier,
@@ -50,7 +50,7 @@ fun SetupNavGraph(
             )
         }
         composable(Destination.Home.route) {
-            Home(authViewModel = authViewModel)
+            Home()
         }
     }
 }

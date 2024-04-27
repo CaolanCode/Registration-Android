@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="Theme.Authentication" parent="android:Theme.Material.Light.NoActionBar" />
+    <style name="Theme.Authentication" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:colorPrimary">@color/colorPrimaryLight</item>
+        <item name="android:colorSecondary">@color/colorSecondaryLight</item>
+        <item name="android:colorAccent">@color/colorAccentLight</item>
+    </style>
 </resources>
